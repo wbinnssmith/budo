@@ -9,8 +9,11 @@ var opts = require('minimist')(args)
 var getport = require('getport')
 
 var entries = opts._
-opts.stream = process.stdout
 delete opts._
+
+var stream = require('garnish')()
+stream.pipe(process.stdout)
+opts.stream = stream
 
 var showHelp = opts.h || opts.help
 

@@ -20,6 +20,7 @@
     "debounce": "^1.0.0",
     "ecstatic": "^0.5.8",
     "events": "^1.0.2",
+    "garnish": "^2.1.1",
     "getport": "^0.1.0",
     "inject-lr-script": "^1.0.0",
     "minimist": "^1.1.0",
@@ -53,10 +54,10 @@
   },
   "scripts": {
     "test": "tape test/test*.js | tap-spec",
-    "start": "./bin/cmd.js example/*.js --dir example --verbose | garnish",
-    "live": "./bin/cmd.js example/*.js --dir example --live -v | garnish -v",
-    "live-plugin": "./bin/cmd.js example/*.js --dir example --live-plugin -v | garnish",
-    "remap": "./bin/cmd.js example/*.js --serve bundle2.js --dir example --live -v | garnish"
+    "start": "./bin/cmd.js example/*.js --dir example --verbose",
+    "live": "./bin/cmd.js example/*.js --dir example --live -v",
+    "live-plugin": "./bin/cmd.js example/*.js --dir example --live-plugin -v",
+    "remap": "./bin/cmd.js example/*.js --serve bundle2.js --dir example --live -v"
   },
   "keywords": [
     "browserify",
