@@ -94,30 +94,6 @@ Currently, this is needed when using sub-arg syntax:
 budo main.js --live -v -- -t [ foo --bar=555 --debug ]
 ```
 
-## browser launcher
-
-You can use [opnr](https://github.com/mattdesl/opnr) to launch the browser when an available port is found. Install it like so:
-
-```sh
-npm install opnr -g
-```
-
-Now, pipe `opnr` before your pretty-printing, and the browser will open when ready.
-
-```sh
-budo index.js | opnr | garnish
-```
-
-With `npm scripts` it might look like this:
-
-```json
-"scripts": {
-  "dev": "budo index.js",
-  "start": "npm run dev | garnish",
-  "open": "npm run dev | opnr | garnish"
-}
-```
-
 ## internal IP
 
 If you want LiveReload to work across many devices, you need to use your internal IP rather than `localhost`. 
